@@ -4,8 +4,9 @@
 This repository proposes this technology and may include an implementation in the future. 
 
 ### Naming
-The name **apar** is an acronym for ActivityPub Address Registry. After a search, I learned that the [definition](https://www.merriam-webster.com/dictionary/apar) an apar is 
+The name **apar** is an acronym for ActivityPub Address Registry. After a search, I learned that the [definition](https://www.merriam-webster.com/dictionary/apar) for an apar is 
 > the three-banded armadillo (Tolypeutes tricinctus) of South America
+
 So that might make a good mascot for this repository in the future. 
 
 ## License
