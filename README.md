@@ -9,6 +9,11 @@ The name **apar** is an acronym for ActivityPub Address Registry. After a search
 
 So that might make a good mascot for this repository in the future. 
 
+## Background
+apar is designed to compliment ActivityPub. But what is [ActivityPub](https://www.w3.org/TR/activitypub/)?
+
+ActivityPub is a W3C Specification, in the Recommendation stage, that details a common protocol for federated social applications. This means that a server that implements the ActivityPub defined protocols is typically interoperable with other servers and clients that also implement the protocols. ActivityPub establishes a standardized, yet extensible, communication protocol for the [Fediverse](https://en.wikipedia.org/wiki/Fediverse).
+
 ## License
 ```
 Copyright 2020 chRyNaN
