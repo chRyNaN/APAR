@@ -29,6 +29,8 @@ Similarities between APAR and a domain registrar may be apparent. In fact, APAR 
 ## How does it work?
 APAR is a de-centralized registry for ActivityPub implementing social application servers. These social application servers that implement the ActivityPub specification may register with APAR for no cost. Client applications can then use APAR to view the available application servers and load content from them. This would happen "behind the scenes" in the client application, so from the User's perspective, this would be no different than a centralized application. Though the underlying technology APAR uses is a de-centralized Blockchain. This enforces that there is no centralized entity with complete control over the registry; Preventing censorship and creating a level playing field for organizations large and small.
 
+![APAR Basic Flow](assets/apar_app_bg_white.png)
+
 ## License
 ```
 Copyright 2020 chRyNaN
