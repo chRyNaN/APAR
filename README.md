@@ -44,6 +44,12 @@ Instead of registering only once and leaving the possibility of the data being s
 
 Even if a registration is invalid, it's last, and now invalid, registration is still stored in the Blockchain. This provides a complete history of all the registrations. An application that is querying APAR and listing all of the valid Servers should exclude any Servers that have an invalid registration. Also, if the Registration Period happens at the same interval for every registration, the iterative process for listing all valid Servers would be faster, since once the first invalid registration is reached, the process can be finished.
 
+#### Incentive - Golden Rule
+Most Blockchains, especially those that require mining, provide some incentive to encourage Nodes to mine the new blocks. In cryptocurrencies like Bitcoin, the incentive is usually financial one, typically in the form of a cryptocurrency reward. The incentive to mine for a Blockchain that isn't a cryptocurrency is more difficult to provide. The incentive structure decided on for APAR is the [Golden Rule](https://en.wikipedia.org/wiki/Golden_Rule):
+> the principle of treating others as you want to be treated.
+
+APAR provides a desirable solution for de-centralized and federated social networks. It provides a means for applications to load content from across the Fediverse, essentially serving as a marketing strategy for these social networks. Because of the benefits provided to federated social networks and the time-based structure of APAR, they each have a vested interest in running Nodes and performing mining for additional blocks. In order to use APAR to promote your federated social network's content and allow the connection between other networks, you would have to register your domain. In order to register your domain, there needs to Nodes that are willing to mine the new transaction Block in the Blockchain. If a registered server refuses to participate in the mining process for fellow servers, then there may be no servers to mine for them when it comes time for them to re-register. In this way, each registered server is incentivised to participate in the mining process, otherwise they wouldn't be able to reap the rewards of using APAR. Since the mining process, with a reasonable Registration Period, shouldn't be as demanding as a cryptocurrency's, this incentivization structure should prove to be satisfactory. 
+
 ## License
 ```
 Copyright 2020 chRyNaN
