@@ -50,6 +50,21 @@ Most Blockchains, especially those that require mining, provide some incentive t
 
 APAR provides a desirable solution for de-centralized and federated social networks. It provides a means for applications to load content from across the Fediverse, essentially serving as a marketing strategy for these social networks. Because of the benefits provided to federated social networks and the time-based structure of APAR, they each have a vested interest in running Nodes and performing mining for additional blocks. In order to use APAR to promote your federated social network's content and allow the connection between other networks, you would have to register your domain. In order to register your domain, there needs to Nodes that are willing to mine the new transaction Block in the Blockchain. If a registered server refuses to participate in the mining process for fellow servers, then there may be no servers to mine for them when it comes time for them to re-register. In this way, each registered server is incentivised to participate in the mining process, otherwise they wouldn't be able to reap the rewards of using APAR. Since the mining process, with a reasonable Registration Period, shouldn't be as demanding as a cryptocurrency's, this incentivization structure should prove to be satisfactory. 
 
+#### Verification
+In addition to mining and consensus mechanisms, there needs to be verification that the information proposed for registration is valid. The verification should happen before the mining process starts and performed by a Node that intends to mine, this way there isn't unnecessary work and time wasted. When a Node completes the mining process and submits the solution to the other peers for validation, the other peer Nodes can also perform the verification (perhaps a simplified variant?) to ensure that the added registration is valid. Some things to consider for verification include the following:
+* Is the first time this Server is being registered, is it in it's Registration Period, or has it's previous registration expired?
+* Is the Server to be registered a valid Server address that implements the ActivityPub specification?
+
+#### Data
+Along with the Block's Header, the following information is required for registration:
+* `serverUrl` - A mandatory `String` URL value for the root application server that implements the ActivityPub Specification (ex: `https://www.example.com`).
+* `webFingerUrl` - An optional `String` URL value pointing to the location of the [Webfinger](https://en.wikipedia.org/wiki/WebFinger) endpoint (ex: `https://www.example.com/.well-known/webfinger`).
+* `feedUrl` - An optional `String` URL value pointing to the location of an ActivityPub outbox that is for the entire application and not just a particular User. This could provide a means to accessing a public feed of information, such as, a "trending section". If this value is provided, accessing this endpoint should return an [ActivityStreams Collection](https://www.w3.org/TR/activitystreams-vocabulary/#dfn-collection).
+* `searchUrl` - An optional `String` URL value pointing to the location of an endpoint where searches can be performed for the entire application. If this value is provided, accessing this endpoint with a query parameter of `q` (ex: `q=SEARCH_QUERY`) should return an [ActivityStreams Collection](https://www.w3.org/TR/activitystreams-vocabulary/#dfn-collection).
+* `renewal` - A mandatory `String` in [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) format. This value represents the time when registration opens up again for this Server. This value will be provided by the Node that performs the mining, if this is provided by the registration proposer, then it will either be ignored or validated.
+* `expiration` - A mandatory `String` in [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) format. This value represents the time when the registration becomes expired for this Server.This value will be provided by the Node that performs the mining, if this is provided by the reigstration proposer, then it will either be ignored or validated.
+* `name` - An optional `String` name value for this registration.
+
 ## License
 ```
 Copyright 2020 chRyNaN
